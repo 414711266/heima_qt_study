@@ -10,7 +10,7 @@
 - Qt5.9.3 安装包：[夸克网盘分享](https://pan.quark.cn/s/c5349d079385#/list/share)
 - [qt-opensource-windows-x86-5.9.3.exe](https://pan.baidu.com/s/11B53cGjDdvp_QWCGuY7Mxg)    提取码：947f
 
-![](img\安装组件.jpg)
+![](img/安装组件.jpg)
 
 ##### vs插件安装
 
@@ -22,7 +22,7 @@
 - 源码默认位置::Qt5.9.3\5.9.3\Src
 - 下载 pdb 调试符号相关数据
 
-![](img\PDB调试符号文件.jpg)
+![](img/PDB调试符号文件.jpg)
 
 - [Index of /online/qtsdkrepository/windows_x86/desktop/qt5_593/qt.593.win64_msvc2017_64](https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt5_593/qt.593.win64_msvc2017_64/)
 - 解压下载好的 xx.7z包，存放到:Qt5.9.3\5.9.3 目录下，方便查找。弹出相同文件，选择全部跳过
