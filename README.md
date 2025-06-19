@@ -10,7 +10,7 @@
 - Qt5.9.3 安装包：[夸克网盘分享](https://pan.quark.cn/s/c5349d079385#/list/share)
 - [qt-opensource-windows-x86-5.9.3.exe_免费高速下载|百度网盘-分享无限制](https://pan.baidu.com/s/11B53cGjDdvp_QWCGuY7Mxg)    提取码：947f
 
-![安装组件](img\安装组件.jpg)
+![](img\安装组件.jpg)
 
 ##### vs插件安装
 
