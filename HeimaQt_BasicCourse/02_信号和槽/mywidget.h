@@ -4,6 +4,7 @@
 #include "ui_mywidget.h"
 #include "Teacher.h"
 #include "Student.h"
+#include <qpushbutton.h>
 
 class MyWidget : public QWidget
 {

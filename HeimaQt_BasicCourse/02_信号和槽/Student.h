@@ -10,6 +10,7 @@ public:
 
     //自定义槽函数，返回值void，需要声明与实现，可重载
     void treat();
+    void treat(QString foodName);
 
 signals:
 

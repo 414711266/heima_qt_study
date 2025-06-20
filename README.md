@@ -162,6 +162,15 @@ qDebug("123");
 
 
 
+##### vs查看代码，配色不显示问题
+
+在 VS2019 中一个解决方案下不同项目出现代码配色显示差异，可能是项目加载与缓存问题。
+
+- 尝试右键解决方案 →“重新生成解决方案”“清理解决方案” 后重新加载项目
+- VS 缓存数据异常影响了项目的显示，关闭 VS，找到解决方案目录下的 `.vs` 隐藏文件夹，将其删除，然后重新打开 VS 加载项目。
+
+
+
 #### 对象树的基本概念  
 
 一定程度下，QT简化了内存回收机制，new出来的对象不用手动delete，也会被析构掉。但是前提是必须加到树上。从主到支的顺序new，从支到主顺序进行析构。所有 new 出来的对象 不用管释放，原因 `children` 表中的对象会在窗口关闭后进行自动释放
@@ -310,6 +319,54 @@ MyWidget::~MyWidget()
 ```
 
 通过 `connect` 链接信号与槽，使用 `emit zt->hungry();` 触发信号，实现 `Student::treat()` 槽函数的执行。
+
+
+
+##### 带参数的信号与槽
+
+```c++
+
+//=============== Teacher.h ======================//
+void hungry(QString foodName);
+
+//=============== Student.h ======================//
+void treat(QString foodName);
+
+//=============== Student.cpp ======================//
+void Student::treat(QString foodName){
+	QString str = QString::fromLocal8Bit("请老师吃饭，老师要吃") + foodName;
+	qDebug() << str.toUtf8().data();
+}
+
+
+//=============== mywidget.cpp ======================//
+void(Teacher:: * teacherSignal)(QString) = &Teacher::hungry;
+void(Student:: * studentSlot)(QString) = &Student::treat;
+// 有参的 信号与槽连接
+connect(zt, teacherSignal, st, studentSlot);
+
+emit zt->hungry(QString::fromLocal8Bit("宫保鸡丁"));
+```
+
+利用函数指针来明确指向哪一个重载函数，原先的写法会失效。
+
+- 断开信号与槽`disconnect(zt, noTeacherSignal, st, noStudentSlot);`
+- 一个信号可连接多个槽函数，同理，多个信号也能连接一个槽函数
+- 信号与槽参数类型必须一一对应，个数不必对应，信号参数量 ≥ 槽函数即可
+
+##### lambda表达式
+
+```c++
+//mutable 改变值传递的内部变量、返回值 []()->type {};
+QPushButton* btn2 = new QPushButton("aaaaa", this);
+btn2->move(200, 0);
+//此处只能用=号（值传递），使用&（引用传递）会报错，做信号与槽操作时，默认内部变量会进行锁状态，只允许只读操作，若使用引用传递会导致程序终止。
+connect(btn2, &QPushButton::clicked, [=]() {
+    btn2->setText("bbbbb");
+});
+```
+
+
 
 
 ### 第二天：

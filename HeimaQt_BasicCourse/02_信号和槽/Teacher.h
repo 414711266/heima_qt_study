@@ -10,6 +10,7 @@ public:
 signals:
 	//自定义信号 返回类型为void，信号只需要声明不需要实现，信号可以重载
 	void hungry();
+	void hungry(QString foodName);
 
 public slots:
 
