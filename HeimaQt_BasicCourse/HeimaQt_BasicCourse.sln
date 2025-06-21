@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01_QPushbutton与窗口", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_信号和槽", "02_信号和槽\02_信号和槽.vcxproj", "{D584F65A-F187-491A-BFC6-6DAF37BAD960}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_QMainWindow_及其部件", "03_QMainWindow_及其部件\03_QMainWindow_及其部件.vcxproj", "{E27FC733-6A2E-4DD5-B3C4-DCAD1524C57B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_addSource", "04_addSource\04_addSource.vcxproj", "{A817740C-D2BF-4ECC-9A0F-86C5105145EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +25,14 @@ Global
 		{D584F65A-F187-491A-BFC6-6DAF37BAD960}.Debug|x64.Build.0 = Debug|x64
 		{D584F65A-F187-491A-BFC6-6DAF37BAD960}.Release|x64.ActiveCfg = Release|x64
 		{D584F65A-F187-491A-BFC6-6DAF37BAD960}.Release|x64.Build.0 = Release|x64
+		{E27FC733-6A2E-4DD5-B3C4-DCAD1524C57B}.Debug|x64.ActiveCfg = Debug|x64
+		{E27FC733-6A2E-4DD5-B3C4-DCAD1524C57B}.Debug|x64.Build.0 = Debug|x64
+		{E27FC733-6A2E-4DD5-B3C4-DCAD1524C57B}.Release|x64.ActiveCfg = Release|x64
+		{E27FC733-6A2E-4DD5-B3C4-DCAD1524C57B}.Release|x64.Build.0 = Release|x64
+		{A817740C-D2BF-4ECC-9A0F-86C5105145EA}.Debug|x64.ActiveCfg = Debug|x64
+		{A817740C-D2BF-4ECC-9A0F-86C5105145EA}.Debug|x64.Build.0 = Debug|x64
+		{A817740C-D2BF-4ECC-9A0F-86C5105145EA}.Release|x64.ActiveCfg = Release|x64
+		{A817740C-D2BF-4ECC-9A0F-86C5105145EA}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

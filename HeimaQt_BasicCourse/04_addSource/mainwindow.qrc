@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/ui">
+        <file>ui/delete.png</file>
+        <file>ui/exit.png</file>
+        <file>ui/open.png</file>
+    </qresource>
+</RCC>
