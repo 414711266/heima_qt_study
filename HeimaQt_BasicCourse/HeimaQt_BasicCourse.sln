@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_QMainWindow_及其部件
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_addSource", "04_addSource\04_addSource.vcxproj", "{A817740C-D2BF-4ECC-9A0F-86C5105145EA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_Dialog_MessageBox", "05_Dialog_MessageBox\05_Dialog_MessageBox.vcxproj", "{3C7CE3BE-07D1-4209-8A73-DBC9E1539002}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -33,6 +35,10 @@ Global
 		{A817740C-D2BF-4ECC-9A0F-86C5105145EA}.Debug|x64.Build.0 = Debug|x64
 		{A817740C-D2BF-4ECC-9A0F-86C5105145EA}.Release|x64.ActiveCfg = Release|x64
 		{A817740C-D2BF-4ECC-9A0F-86C5105145EA}.Release|x64.Build.0 = Release|x64
+		{3C7CE3BE-07D1-4209-8A73-DBC9E1539002}.Debug|x64.ActiveCfg = Debug|x64
+		{3C7CE3BE-07D1-4209-8A73-DBC9E1539002}.Debug|x64.Build.0 = Debug|x64
+		{3C7CE3BE-07D1-4209-8A73-DBC9E1539002}.Release|x64.ActiveCfg = Release|x64
+		{3C7CE3BE-07D1-4209-8A73-DBC9E1539002}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
