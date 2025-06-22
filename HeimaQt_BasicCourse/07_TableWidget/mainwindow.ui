@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindowClass</class>
+ <widget class="QWidget" name="mainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>mainWindow</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>11</y>
+     <width>461</width>
+     <height>371</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addBtn">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>100</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加赵云</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delBtn">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>180</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除赵云</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

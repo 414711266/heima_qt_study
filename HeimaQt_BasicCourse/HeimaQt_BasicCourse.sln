@@ -13,6 +13,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_addSource", "04_addSourc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_Dialog_MessageBox", "05_Dialog_MessageBox\05_Dialog_MessageBox.vcxproj", "{3C7CE3BE-07D1-4209-8A73-DBC9E1539002}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_Layout", "06_Layout\06_Layout.vcxproj", "{944DA044-9932-4843-B2F3-8698467F13D4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_TableWidget", "07_TableWidget\07_TableWidget.vcxproj", "{3406CBD6-86DC-4B96-9A02-F5D7EEC94694}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -39,6 +43,14 @@ Global
 		{3C7CE3BE-07D1-4209-8A73-DBC9E1539002}.Debug|x64.Build.0 = Debug|x64
 		{3C7CE3BE-07D1-4209-8A73-DBC9E1539002}.Release|x64.ActiveCfg = Release|x64
 		{3C7CE3BE-07D1-4209-8A73-DBC9E1539002}.Release|x64.Build.0 = Release|x64
+		{944DA044-9932-4843-B2F3-8698467F13D4}.Debug|x64.ActiveCfg = Debug|x64
+		{944DA044-9932-4843-B2F3-8698467F13D4}.Debug|x64.Build.0 = Debug|x64
+		{944DA044-9932-4843-B2F3-8698467F13D4}.Release|x64.ActiveCfg = Release|x64
+		{944DA044-9932-4843-B2F3-8698467F13D4}.Release|x64.Build.0 = Release|x64
+		{3406CBD6-86DC-4B96-9A02-F5D7EEC94694}.Debug|x64.ActiveCfg = Debug|x64
+		{3406CBD6-86DC-4B96-9A02-F5D7EEC94694}.Debug|x64.Build.0 = Debug|x64
+		{3406CBD6-86DC-4B96-9A02-F5D7EEC94694}.Release|x64.ActiveCfg = Release|x64
+		{3406CBD6-86DC-4B96-9A02-F5D7EEC94694}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
