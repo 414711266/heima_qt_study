@@ -628,6 +628,57 @@ mainWindow::~mainWindow()
 
 #### 自定义控件  
 
+通过新添加`.ui`文件以及对应的`.h`与`.cpp`文件，在`ui`文件中绘制自己所需的控件，譬如`QSpinBox`与`QSlider`相组合。
+
+右击项目，添加新建项，选择`Qt`中的`Qt Widgets Class`，设置好类名，进行相应文件的添加。然后在主`ui`中添加`widget`，将其提升为新添加的类，然后在自定义控件类中书写控件组合逻辑，运行代码。
+
+其中`ui_smallwidget.h`会自动生成。
+
+##### smallwidget.h
+
+```c++
+#pragma once
+#include <qwidget.h>
+#include "ui_smallwidget.h"
+
+class SmallWidget :  public QWidget
+{
+    Q_OBJECT
+
+public:
+    SmallWidget(QWidget* parent = nullptr);
+    ~SmallWidget();
+
+private:
+    Ui::Form ui;
+};
+```
+
+##### smallwidget.cpp
+
+```c++
+#include "smallwidget.h"
+
+SmallWidget::SmallWidget(QWidget* parent)
+    : QWidget(parent)
+{
+    ui.setupUi(this);
+
+    // 计数器带着水平条
+    void(QSpinBox:: * spinboxSign)(int) = &QSpinBox::valueChanged;
+    connect(ui.spinBox, spinboxSign, ui.horizontalSlider, &QSlider::setValue);
+
+    //水平条带着计数器
+    connect(ui.horizontalSlider, &QSlider::valueChanged, ui.spinBox, &QSpinBox::setValue);
+
+}
+
+SmallWidget::~SmallWidget()
+{}
+```
+
+
+
 #### 事件处理  
 
 #### 定时器  
