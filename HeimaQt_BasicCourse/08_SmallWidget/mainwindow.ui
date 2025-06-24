@@ -16,10 +16,10 @@
   <widget class="SmallWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>120</y>
-     <width>271</width>
-     <height>131</height>
+     <x>90</x>
+     <y>40</y>
+     <width>281</width>
+     <height>151</height>
     </rect>
    </property>
   </widget>

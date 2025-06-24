@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_TableWidget", "07_TableW
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_SmallWidget", "08_SmallWidget\08_SmallWidget.vcxproj", "{19AC37B4-6057-4510-9725-2DD973DD2117}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09_Qt_Event", "09_Qt_Event\09_Qt_Event.vcxproj", "{A7486499-7D3C-481F-B44E-BC915E458C3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -57,6 +59,10 @@ Global
 		{19AC37B4-6057-4510-9725-2DD973DD2117}.Debug|x64.Build.0 = Debug|x64
 		{19AC37B4-6057-4510-9725-2DD973DD2117}.Release|x64.ActiveCfg = Release|x64
 		{19AC37B4-6057-4510-9725-2DD973DD2117}.Release|x64.Build.0 = Release|x64
+		{A7486499-7D3C-481F-B44E-BC915E458C3D}.Debug|x64.ActiveCfg = Debug|x64
+		{A7486499-7D3C-481F-B44E-BC915E458C3D}.Debug|x64.Build.0 = Debug|x64
+		{A7486499-7D3C-481F-B44E-BC915E458C3D}.Release|x64.ActiveCfg = Release|x64
+		{A7486499-7D3C-481F-B44E-BC915E458C3D}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
