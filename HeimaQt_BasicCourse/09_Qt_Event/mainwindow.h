@@ -18,6 +18,11 @@ public:
     void mouseReleaseEvent(QMouseEvent*) override;
     void mouseMoveEvent(QMouseEvent* ev) override;
 
+    // 定时器事件
+    void timerEvent(QTimerEvent *e) override;
 private:
     Ui::mainWindowClass ui;
+
+    int id1;
+    int id2;
 };
