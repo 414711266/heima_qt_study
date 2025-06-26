@@ -681,7 +681,139 @@ SmallWidget::~SmallWidget()
 
 #### 事件处理  
 
+设计鼠标进入与离开widget事件，通过重写函数实现。
+
+##### mainWindow.h
+
+```c++
+#pragma once
+
+#include <QtWidgets/QWidget>
+#include "ui_mainwindow.h"
+
+class mainWindow : public QWidget
+{
+    Q_OBJECT
+
+public:
+    mainWindow(QWidget *parent = nullptr);
+    ~mainWindow();
+
+    // 鼠标事件
+    void enterEvent(QEvent*) override;
+    void leaveEvent(QEvent*) override;
+    void mousePressEvent(QMouseEvent* ev) override;
+    void mouseReleaseEvent(QMouseEvent*) override;
+    void mouseMoveEvent(QMouseEvent* ev) override;
+
+    // 定时器事件
+    void timerEvent(QTimerEvent *e) override;
+private:
+    Ui::mainWindowClass ui;
+
+    int id1;
+    int id2;
+};
+
+```
+
+##### mainWindow.cpp
+
+```c++
+#include "mainwindow.h"
+#include "qdebug.h"
+#include "QMouseEvent"
+#include "QTimerEvent"
+
+mainWindow::mainWindow(QWidget *parent)
+    : QWidget(parent)
+{
+    // this->setMouseTracking(true);  无需鼠标按下也能捕获到鼠标的移动，默认为False
+
+    id1 = startTimer(1000); //一秒种触发一次
+    id2 = startTimer(2000); //一秒种触发一次
+
+    ui.setupUi(this);
+}
+
+mainWindow::~mainWindow()
+{}
+
+void mainWindow::enterEvent(QEvent*)
+{
+    qDebug().noquote() << QString::fromLocal8Bit("鼠标进入事件触发");
+}
+
+void mainWindow::leaveEvent(QEvent*)
+{
+    qDebug().noquote() << QString::fromLocal8Bit("鼠标离开事件触发");
+}
+
+void mainWindow::mousePressEvent(QMouseEvent* ev)
+{
+    if (ev->button() == Qt::LeftButton)
+    {
+        qDebug().noquote() << QString::fromLocal8Bit("鼠标按下事件触发，x = %1 ,y = %2").arg(ev->x()).arg(ev->y());
+    }
+    
+}
+
+void mainWindow::mouseReleaseEvent(QMouseEvent*)
+{
+    qDebug().noquote() << QString::fromLocal8Bit("鼠标释放事件触发");
+}
+
+void mainWindow::mouseMoveEvent(QMouseEvent* ev)
+{
+    //持续状态 需要用buttons  用与操作符 进行判断 (buttons()相当于集合了左右中三个键)
+    if (ev->buttons() & Qt::LeftButton)
+    {
+        qDebug().noquote() << QString::fromLocal8Bit("鼠标移动事件触发");
+    }
+    
+}
+
+void mainWindow::timerEvent(QTimerEvent *e)
+{
+    if (e->timerId() == id1)
+    {
+        static int num = 0;
+        ui.label->setText(QString::number(num++));
+    }
+    if (e->timerId() == id2)
+    {
+        static int num2 = 0;
+        ui.label_2->setText(QString::number(num2++));
+    }
+}
+```
+
+
+
 #### 定时器  
+
+ 同样，重新定时器事件即可
+
+```c++
+void mainWindow::timerEvent(QTimerEvent *e)
+{
+    if (e->timerId() == id1)
+    {
+        static int num = 0;
+        ui.label->setText(QString::number(num++));
+    }
+    if (e->timerId() == id2)
+    {
+        static int num2 = 0;
+        ui.label_2->setText(QString::number(num2++));
+    }
+
+
+}
+
+```
+
+
 
 #### Event 事件分发器  
 
