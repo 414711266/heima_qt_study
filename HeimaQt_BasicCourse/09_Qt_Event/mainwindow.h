@@ -20,6 +20,9 @@ public:
 
     // 定时器事件
     void timerEvent(QTimerEvent *e) override;
+
+    // 事件分发 event事件
+    bool event(QEvent* e) override;
 private:
     Ui::mainWindowClass ui;
 

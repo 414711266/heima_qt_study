@@ -66,3 +66,15 @@ void mainWindow::timerEvent(QTimerEvent *e)
 
 
 }
+
+bool mainWindow::event(QEvent* e)
+{
+    if (e->type() == QEvent::MouseButtonPress)
+    {
+        QMouseEvent* ev = static_cast<QMouseEvent*>(e);
+        qDebug().noquote() << QString::fromLocal8Bit("QEvent::鼠标按下事件触发，x = %1 ,y = %2").arg(ev->x()).arg(ev->y());
+
+        return true;
+    }
+    return QWidget::event(e);
+}

@@ -817,6 +817,30 @@ void mainWindow::timerEvent(QTimerEvent *e)
 
 #### Event 事件分发器  
 
+```c++
+// 事件分发 event事件
+bool event(QEvent* e) override;
+    
+
+bool mainWindow::event(QEvent* e)
+{
+    if (e->type() == QEvent::MouseButtonPress)
+    {
+        QMouseEvent* ev = static_cast<QMouseEvent*>(e);
+        qDebug().noquote() << QString::fromLocal8Bit("QEvent::鼠标按下事件触发，x = %1 ,y = %2").arg(ev->x()).arg(ev->y());
+
+        return true;
+    }
+    return QWidget::event(e);
+}
+```
+
+通过重写`event`函数来进行事件的拦截，只传递执行自己所需的事件。在函数中想要用到`QMouseEvent`类成员，从父类转换到子类，使用`static_cast`。
+
+
+
+
+
 #### 事件过滤器  
 
 #### QPainter 绘图  
